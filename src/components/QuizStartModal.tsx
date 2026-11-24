@@ -7,7 +7,7 @@ interface QuizStartModalProps {
 }
 
 type CountOption = "all" | "10" | "20" | "custom";
-type TimeOption = "none" | "300" | "600" | "900";
+type TimeOption = "none" | "1800" | "3600" | "5400";
 
 function QuizStartModal({ totalCount, onCancel, onStart }: QuizStartModalProps) {
   const [countOption, setCountOption] = useState<CountOption>("all");
@@ -108,26 +108,26 @@ function QuizStartModal({ totalCount, onCancel, onStart }: QuizStartModalProps) 
             <label>
               <input
                 type="radio"
-                checked={timeOption === "300"}
-                onChange={() => setTimeOption("300")}
+                checked={timeOption === "1800"}
+                onChange={() => setTimeOption("1800")}
               />
-              5분
+              30분
             </label>
             <label>
               <input
                 type="radio"
-                checked={timeOption === "600"}
-                onChange={() => setTimeOption("600")}
+                checked={timeOption === "3600"}
+                onChange={() => setTimeOption("3600")}
               />
-              10분
+              60분
             </label>
             <label>
               <input
                 type="radio"
-                checked={timeOption === "900"}
-                onChange={() => setTimeOption("900")}
+                checked={timeOption === "5400"}
+                onChange={() => setTimeOption("5400")}
               />
-              15분
+              90분
             </label>
           </div>
         </div>
