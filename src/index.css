@@ -1,0 +1,88 @@
+:root {
+  --text: #4b4557;
+  --text-h: #1a1527;
+  --bg: #f4f1fb;
+  --surface: #ffffff;
+  --border: #e5e3f0;
+
+  /* primary (indigo/violet) */
+  --accent: #6c4bf4;
+  --accent-2: #9b6bff;
+  --accent-bg: rgba(108, 75, 244, 0.1);
+
+  /* secondary accents for a richer, less "one-note" palette */
+  --blue: #2563eb;
+  --blue-bg: rgba(37, 99, 235, 0.1);
+  --pink: #e8398a;
+  --pink-bg: rgba(232, 57, 138, 0.1);
+  --teal: #0d9488;
+  --teal-bg: rgba(13, 148, 136, 0.1);
+  --amber: #d97706;
+  --amber-bg: rgba(217, 119, 6, 0.12);
+
+  --correct: #1f9d55;
+  --correct-bg: rgba(31, 157, 85, 0.12);
+  --incorrect: #d1313d;
+  --incorrect-bg: rgba(209, 49, 61, 0.1);
+  --shadow: rgba(108, 75, 244, 0.14) 0 8px 24px;
+
+  font:
+    16px/1.6 "Pretendard Variable", Pretendard, system-ui, "Segoe UI", Roboto,
+    sans-serif;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme="dark"] {
+  --text: #c7c2d9;
+  --text-h: #f3f1fa;
+  --bg: #15121f;
+  --surface: #1e1a2e;
+  --border: #322c47;
+  --accent-bg: rgba(155, 107, 255, 0.18);
+  --blue-bg: rgba(59, 130, 246, 0.18);
+  --pink-bg: rgba(232, 57, 138, 0.18);
+  --teal-bg: rgba(45, 212, 191, 0.18);
+  --amber-bg: rgba(251, 191, 36, 0.18);
+  --correct-bg: rgba(31, 157, 85, 0.2);
+  --incorrect-bg: rgba(209, 49, 61, 0.2);
+  --shadow: rgba(0, 0, 0, 0.4) 0 8px 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 8% -5%, rgba(37, 99, 235, 0.14), transparent 40%),
+    radial-gradient(circle at 92% 10%, rgba(232, 57, 138, 0.12), transparent 42%),
+    radial-gradient(circle at 50% 100%, rgba(13, 148, 136, 0.1), transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(155, 107, 255, 0.14), transparent 40%),
+    var(--bg);
+  transition: background-color 0.2s ease;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+h1,
+h2 {
+  color: var(--text-h);
+  margin: 0 0 8px;
+  letter-spacing: -0.3px;
+}
+
+p {
+  margin: 0;
+}
+
+
+
